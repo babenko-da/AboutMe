@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <array name="it_skills">
+        <item>Objective-C</item>
+        <item>Cocoa</item>
+        <item>Java</item>
+        <item>Git</item>
+        <item>AS 3.0 / Adobe Air / Flex / Flash </item>
+        <item>MySQL</item>
+        <item>HTML</item>
+        <item>CSS</item>
+        <item>Photoshop</item>
+    </array>
+    <array name="education">
+        <item>2016-... GeekBrains</item>
+        <item>2015-... STEP Computer Academy</item>
+        <item>2007-2012 Zaporozhye Institute of Economics and Information Technology</item>
+    </array>
+    <array name="interests">
+        <item>IT</item>
+        <item>Business</item>
+        <item>Self-development</item>
+    </array>
+    <array name="languages">
+        <item>Ukrainian (native)</item>
+        <item>Russian (native)</item>
+        <item>English (pre-intermediate)</item>
+    </array>
+</resources>

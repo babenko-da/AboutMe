@@ -1,0 +1,10 @@
+<resources>
+    <!-- Default screen margins, per the Android Design guidelines. -->
+    <dimen name="activity_horizontal_margin">0dp</dimen>
+    <dimen name="activity_vertical_margin">0dp</dimen>
+    <dimen name="header_elevation">3dp</dimen>
+
+    <!--Text-->
+    <dimen name="cardview_title_textsize">8pt</dimen>
+    <dimen name="cardview_descriprion_textsize">6.5pt</dimen>
+</resources>

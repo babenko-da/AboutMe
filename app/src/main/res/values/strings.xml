@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">AboutMe</string>
+    <string name="fio">Dmitry Babenko</string>
+    <string name="email"><a href='mailto:mail2babenko@gmail.com'>mail2babenko@gmail.com</a></string>
+    <string name="linkedin"><a href='https://ua.linkedin.com/in/babenkodmitry'>linkedin.com/in/babenkodmitry</a></string>
+    <string name="current_position">Mobile developer</string>
+    <string name="it_skills">Skills</string>
+    <string name="education">Education</string>
+    <string name="interests">Interests</string>
+    <string name="languages">Languages</string>
+    <string name="copyright">© 2016 Babenko Dmitry</string>
+</resources>
