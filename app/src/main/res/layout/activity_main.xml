@@ -58,6 +58,7 @@
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:textSize="5.5pt"
                 android:text="@string/linkedin"
                 android:textColor="@color/colorAccent"
                 android:autoLink="web"/>
