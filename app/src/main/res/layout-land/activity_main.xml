@@ -1,83 +1,100 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:orientation="horizontal"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-    <!--Header-->
-    <RelativeLayout
-        android:layout_width="200dp"
-        android:layout_height="match_parent"
-        android:background="@color/colorPrimaryDark">
-        <LinearLayout
-            android:id="@+id/header"
-            android:orientation="vertical"
-            android:layout_width="200dp"
-            android:layout_height="wrap_content"
-            android:weightSum="1"
-            android:padding="10dp">
-
-            <de.hdodenhof.circleimageview.CircleImageView
-                xmlns:app="http://schemas.android.com/apk/res-auto"
-                android:layout_width="96dp"
-                android:layout_height="96dp"
-                android:src="@drawable/photo"
-                app:civ_border_width="2dp"
-                app:civ_border_color="#FFFFFFFF"
-                android:layout_gravity="center_horizontal" />
-
-            <LinearLayout
-                android:orientation="vertical"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:paddingTop="10dp">
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:text="@string/fio"
-                    android:textAlignment="center"
-                    android:textColor="@color/colorText"
-                    android:textStyle="bold" />
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="2dp"
-                    android:textAlignment="center"
-                    android:text="@string/current_position"
-                    android:textColor="@color/colorText"/>
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="2dp"
-                    android:textAlignment="center"
-                    android:text="@string/email"
-                    android:autoLink="email"
-                    android:textColor="@color/colorAccent"/>
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="2dp"
-                    android:textAlignment="center"
-                    android:textSize="5.5pt"
-                    android:text="@string/linkedin"
-                    android:textColor="@color/colorAccent"
-                    android:autoLink="web"/>
-            </LinearLayout>
-        </LinearLayout>
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="25dp"
-            android:layout_alignParentBottom="true"
-            android:textAlignment="center"
-            android:paddingTop="3dp"
-            android:text="@string/copyright"/>
-    </RelativeLayout>
-
-    <!--info-->
-    <android.support.v7.widget.RecyclerView
-        android:id="@+id/recycler_view"
-        android:layout_below="@id/header"
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/main_toolbar"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:scrollbars="vertical"/>
+        android:layout_height="wrap_content"
+        android:minHeight="?attr/actionBarSize"
+        android:background="@color/colorPrimary"
+        app:theme="@style/ThemeOverlay.AppCompat.Dark"
+        app:popupTheme="@style/ThemeOverlay.AppCompat.Dark"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal">
+        <!--Header-->
+        <RelativeLayout
+            android:layout_width="200dp"
+            android:layout_height="match_parent"
+            android:background="@color/colorPrimaryDark">
+            <LinearLayout
+                android:id="@+id/header"
+                android:orientation="vertical"
+                android:layout_width="200dp"
+                android:layout_height="wrap_content"
+                android:weightSum="1"
+                android:padding="10dp">
+
+                <de.hdodenhof.circleimageview.CircleImageView
+                    xmlns:app="http://schemas.android.com/apk/res-auto"
+                    android:layout_width="96dp"
+                    android:layout_height="96dp"
+                    android:src="@drawable/photo"
+                    app:civ_border_width="2dp"
+                    app:civ_border_color="#FFFFFFFF"
+                    android:layout_gravity="center_horizontal" />
+
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:paddingTop="10dp">
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/fio"
+                        android:textAlignment="center"
+                        android:textColor="@color/colorText"
+                        android:textStyle="bold" />
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="2dp"
+                        android:textAlignment="center"
+                        android:text="@string/current_position"
+                        android:textColor="@color/colorText"/>
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="2dp"
+                        android:textAlignment="center"
+                        android:text="@string/email"
+                        android:autoLink="email"
+                        android:textColor="@color/colorAccent"/>
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="2dp"
+                        android:textAlignment="center"
+                        android:textSize="5.5pt"
+                        android:text="@string/linkedin"
+                        android:textColor="@color/colorAccent"
+                        android:autoLink="web"/>
+                </LinearLayout>
+            </LinearLayout>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="25dp"
+                android:layout_alignParentBottom="true"
+                android:textAlignment="center"
+                android:paddingTop="3dp"
+                android:textColor="@color/colorPrimary"
+                android:text="@string/copyright"/>
+        </RelativeLayout>
+
+        <!--info-->
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/recycler_view"
+            android:layout_below="@id/header"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/colorPrimaryDark"
+            android:scrollbars="vertical"/>
+    </LinearLayout>
 </LinearLayout>

@@ -58,22 +58,26 @@ public class MainActivity extends AppCompatActivity implements AppBarLayout.OnOf
         mRecyclerView.setLayoutManager(new LinearLayoutManager(this));
         mRecyclerView.setAdapter(new RecyclerViewAdapter(getDataSet()));
 
-
+        mToolbar = (Toolbar) findViewById(R.id.main_toolbar);
+        setSupportActionBar(mToolbar);
+        mToolbar.inflateMenu(R.menu.menu_activity_main);//todo нужна ли эта строка и зачем? в onCreateOptionMenu идет раздувание меню инфлятором
 
         if(getResources().getConfiguration().orientation == Configuration.ORIENTATION_PORTRAIT) {
-            bindActivity();
+            mPhoto = (CircleImageView) findViewById(R.id.photo);
+            mTitleContainer = (LinearLayout) findViewById(R.id.main_toolbar_title_container);
+            mTitleDescriptionContainer = (LinearLayout) findViewById(R.id.main_title_description_container);
+            mAppBarLayout   = (AppBarLayout) findViewById(R.id.main_app_bar_layout);
+
             originalPhotoSize = getResources().getDimensionPixelSize(R.dimen.photo_size);
             minPhotoSize = getResources().getDimensionPixelSize(R.dimen.photo_final_width);
             mPhotoSizeDif = originalPhotoSize - minPhotoSize;
 
-            setSupportActionBar(mToolbar);
             getSupportActionBar().setDisplayShowTitleEnabled(false);
 
             mAppBarLayout.addOnOffsetChangedListener(this);
             startAlphaAnimation(mTitleContainer, 0, View.INVISIBLE);
-        }
 
-        mToolbar.inflateMenu(R.menu.menu_activity_main);//todo нужна ли эта строка и зачем? в onCreateOptionMenu идет раздувание меню инфлятором
+        }
     }
 
     @Override
@@ -131,15 +135,6 @@ public class MainActivity extends AppCompatActivity implements AppBarLayout.OnOf
             builder.append(arr[i]);
         }
         return builder.toString();
-    }
-
-    //header animation
-    private void bindActivity() {
-        mPhoto = (CircleImageView) findViewById(R.id.photo);
-        mToolbar        = (Toolbar) findViewById(R.id.main_toolbar);
-        mTitleContainer = (LinearLayout) findViewById(R.id.main_toolbar_title_container);
-        mTitleDescriptionContainer = (LinearLayout) findViewById(R.id.main_title_description_container);
-        mAppBarLayout   = (AppBarLayout) findViewById(R.id.main_app_bar_layout);
     }
 
     @Override
