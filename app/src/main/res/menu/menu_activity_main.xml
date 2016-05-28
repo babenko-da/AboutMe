@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/main_menu_action_open_on_github"
+        android:title="@string/openOnGitHub"
+        android:icon="@drawable/ic_git_hub_logo_24dp"/>
+    <item
+        android:id="@+id/main_menu_action_open_on_linkedin"
+        android:title="@string/openOnLinkedId"
+        android:icon="@drawable/ic_linkedin_logo_24dp" />
+</menu>

@@ -8,5 +8,9 @@
     <string name="education">Education</string>
     <string name="interests">Interests</string>
     <string name="languages">Languages</string>
-    <string name="copyright">© 2016 Babenko Dmitry</string>
+    <string name="copyright">© 2016 Dmitry Babenko</string>
+    <string name="openOnGitHub">Открыть на GitHub</string>
+    <string name="openOnLinkedId">Открыть на LinkedIn</string>
+    <string name="gitHubLink">https://github.com/babenko-da</string>
+    <string name="linkedinLink">https://linkedin.com/in/babenkodmitry</string>
 </resources>

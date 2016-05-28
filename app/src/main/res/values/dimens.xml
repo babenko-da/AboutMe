@@ -5,6 +5,16 @@
     <dimen name="header_elevation">3dp</dimen>
 
     <!--Text-->
-    <dimen name="cardview_title_textsize">8pt</dimen>
-    <dimen name="cardview_descriprion_textsize">6.5pt</dimen>
+    <dimen name="cardview_title_textsize">18sp</dimen>
+    <dimen name="cardview_descriprion_textsize">14sp</dimen>
+
+    <dimen name="appBarHeight">130dp</dimen>
+    <dimen name="cardViewMargin">5dp</dimen>
+    <dimen name="cardViewRecyclerViewPadding">5dp</dimen>
+
+
+    <dimen name="photo_final_width">38dp</dimen>
+    <dimen name="spacing_normal">16dp</dimen>
+    <dimen name="photo_size">96dp</dimen>
+
 </resources>
