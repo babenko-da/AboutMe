@@ -60,7 +60,6 @@ public class MainActivity extends AppCompatActivity implements AppBarLayout.OnOf
 
         mToolbar = (Toolbar) findViewById(R.id.main_toolbar);
         setSupportActionBar(mToolbar);
-        mToolbar.inflateMenu(R.menu.menu_activity_main);//todo нужна ли эта строка и зачем? в onCreateOptionMenu идет раздувание меню инфлятором
 
         if(getResources().getConfiguration().orientation == Configuration.ORIENTATION_PORTRAIT) {
             mPhoto = (CircleImageView) findViewById(R.id.photo);
@@ -76,7 +75,6 @@ public class MainActivity extends AppCompatActivity implements AppBarLayout.OnOf
 
             mAppBarLayout.addOnOffsetChangedListener(this);
             startAlphaAnimation(mTitleContainer, 0, View.INVISIBLE);
-
         }
     }
 
@@ -89,6 +87,9 @@ public class MainActivity extends AppCompatActivity implements AppBarLayout.OnOf
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
         switch (item.getItemId()) {
+            case R.id.main_menu_action_show_on_map:
+                startActivity(new Intent(this, MapActivity.class));
+                return true;
             case R.id.main_menu_action_open_on_github:
                 openUrl(getResources().getString(R.string.gitHubLink));
                 return true;
@@ -143,13 +144,12 @@ public class MainActivity extends AppCompatActivity implements AppBarLayout.OnOf
         float percentage = (float) Math.abs(offset) / (float) maxScroll;
 
         if (oldPer != percentage) {
-            oldPer = percentage; //предотвращение повторного вызова, обусловленного прминением параметров для mPhoto
+            oldPer = percentage; //предотвращение повторного вызова, обусловленного прменением параметров для mPhoto
 
             ViewGroup.LayoutParams lp = mPhoto.getLayoutParams();
             lp.height = lp.width = (int)((1.0f - percentage) * mPhotoSizeDif) + minPhotoSize;
             mPhoto.setLayoutParams(lp);
 
-//            Log.d(TAG, "persengae: " + String.valueOf(percentage));
             handleAlphaOnTitle(percentage);
             handleToolbarTitleVisibility(percentage);
         }
